@@ -154,6 +154,5 @@ func handleCommand(server *Server, client *ClientConnection, input string) {
 		}
 	default:
 		client.connection.Write([]byte("Unknown command\n"))
-
 	}
 }
