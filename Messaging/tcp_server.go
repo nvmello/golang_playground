@@ -70,6 +70,7 @@ func handleConnection(server *Server, conn net.Conn) {
 		connection:    conn,
 		subscriptions: make(map[string]bool),
 	}
+
 	//Store the client in our clients map
 	server.clients.Store(client.id, client)
 	fmt.Println("Handling new connection from", clientID)
